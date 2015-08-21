@@ -1,0 +1,239 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#373737"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CalculatorActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/equationEditor"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#585858"
+            android:gravity="end"
+            android:padding="20dp"
+            android:text="@string/equation_editor_plchldr"
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="15dp">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="doMath"
+                android:padding="20dp"
+                android:text="@string/btn_1"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/button1"
+                android:onClick="doMath"
+                android:padding="20dp"
+                android:text="@string/btn_2"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/button2"
+                android:onClick="doMath"
+                android:padding="20dp"
+                android:text="@string/btn_3"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/buttonAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/button3"
+                android:onClick="doMath"
+                android:padding="20dp"
+                android:text="@string/btn_add"
+                android:textSize="25sp" />
+        </RelativeLayout>
+    </TableRow>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doMath"
+            android:padding="20dp"
+            android:text="@string/btn_4"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/button4"
+            android:onClick="doMath"
+            android:padding="20dp"
+            android:text="@string/btn_5"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/button5"
+            android:onClick="doMath"
+            android:padding="20dp"
+            android:text="@string/btn_6"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/button6"
+            android:onClick="doMath"
+            android:padding="20dp"
+            android:text="@string/btn_subtract"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doMath"
+            android:padding="20dp"
+            android:text="@string/btn_7"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/button7"
+            android:onClick="doMath"
+            android:padding="20dp"
+            android:text="@string/btn_8"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/button8"
+            android:onClick="doMath"
+            android:padding="20dp"
+            android:text="@string/btn_9"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/button9"
+            android:onClick="doMath"
+            android:padding="20dp"
+            android:text="@string/btn_multiply"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="doMath"
+            android:padding="20dp"
+            android:text="@string/btn_0"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/buttonBackspace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/button0"
+            android:onClick="doMath"
+            android:padding="20dp"
+            android:text="@string/btn_backspace"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/buttonClearScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/buttonBackspace"
+            android:onClick="doMath"
+            android:padding="20dp"
+            android:text="@string/btn_clear_screen"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/buttonClearScreen"
+            android:onClick="doMath"
+            android:padding="20dp"
+            android:text="@string/btn_divide"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="20dp">
+
+
+        <Button
+            android:id="@+id/buttonEquals"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:onClick="doMath"
+            android:padding="20dp"
+            android:text="@string/btn_equals"
+            android:textSize="25sp" />
+    </RelativeLayout>
+</LinearLayout>
